@@ -30,9 +30,17 @@ cout << "Problem 1\n";
     temp = 1.8 * Celsius + 32;
     cout << "\nThe temperature in Fahrenheit is :" << temp << endl;
     cout << "Problem 4\n";
-    int base , exponent1 , exponent2 ;
-
-
-
-
+    double base , exponent1 , exponent2 ;
+    cout << " Enter the expressions :" ;
+    cin >> base >>  exponent1  >> exponent2 ;
+    double result = pow(pow(base,exponent1),exponent2);
+    cout << "The result of (a^b)^c is ;" << result << endl ;2;
+    cout << "\n Problem 5 ";
+    double N;
+    cout << "Enter a number:";
+    cin >> N ;
+    cout << "Powers of " << N << " from 1 to 10:" << endl;
+    for (int i = 1; i <= 10; ++i) {
+        cout << N << " ^ " << i << " = " << pow(N, i) << endl;
+    }
     return 0; }
