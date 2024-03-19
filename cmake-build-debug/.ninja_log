@@ -1,9 +1,12 @@
 # ninja log v5
 0	657	7325673689846742	CMakeFiles/homework_2.dir/main.cpp.obj	82214dc97cb3057f
 659	802	7325673691271987	homework_2.exe	a5efe4fbcbedd9e6
+<<<<<<< HEAD
 15	515	7325705795804467	CMakeFiles/homework_2.dir/main.cpp.obj	82214dc97cb3057f
 516	642	7325705797030366	homework_2.exe	a5efe4fbcbedd9e6
 7	573	7325706888007432	CMakeFiles/homework_2.dir/main.cpp.obj	82214dc97cb3057f
 574	697	7325706889203432	homework_2.exe	a5efe4fbcbedd9e6
 4	476	7325707191441334	CMakeFiles/homework_2.dir/main.cpp.obj	82214dc97cb3057f
 476	573	7325707192388172	homework_2.exe	a5efe4fbcbedd9e6
+=======
+>>>>>>> 92211d1aa09473238125ed220d60e69b3da8fd0e
