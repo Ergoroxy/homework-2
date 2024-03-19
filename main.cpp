@@ -1,8 +1,10 @@
-<<<<<<< HEAD
- #include <iostream>
- using namespace std;
+#include <iostream>
+#include <valarray>
+#include <cmath>
+
+using namespace std;
 int main (){
-cout << "Problem 3\n";
+cout << "Problem 1\n";
     int num1,num2;
     float avg , product;
     cout << "Enter the first number:";
@@ -13,28 +15,24 @@ cout << "Problem 3\n";
     product = num1 * num2;
     cout << "The avg of two numbers:" << avg << endl;
     cout << " The product of two numbers :" << product << endl;
+    cout << "Problem 2\n";
+    float a,b ,area;
+    cout << "Enter the Base of a triangle:";
+    cin >> a;
+    cout << "Enter the Length of a triangle:";
+    cin >> b;
+    area =(a*b)/2;
+    cout << "The area of a Triangle is : " << area << endl;
+    cout <<"Problem 3\n";
+    float  Celsius,Fahrenheit,temp;
+    cout << "\nEnter the temperature in Celsius: ";
+    cin >> Celsius;
+    temp = 1.8 * Celsius + 32;
+    cout << "\nThe temperature in Fahrenheit is :" << temp << endl;
+    cout << "Problem 4\n";
+    int base , exponent1 , exponent2 ;
+
+
+
+
     return 0; }
-
-
-=======
-
-#include <iostream>
-#include <math.h>
-
- cout << "PROBLEM 1\n";
-    int intNumber = 23;
-    float floatNumber = 3.14;
-    double doubleNumber = 45.1234;
-    bool boolean = true;
-    char charName = 'A';
-    cout << "Value of Integer is " << intNumber <<  ". Size is " << sizeof(intNumber) <<endl;
-    cout << "Value of Float is " << intNumber <<  ". Size is " << sizeof(float) <<endl;
-    cout << " Value of Double is " << intNumber << ".Size is " << sizeof (double ) << endl;
-    cout << "Value of Bool is " << intNumber << ".Size is " << sizeof (bool) << endl;
-    cout << "Value of Char is " << intNumber << ".Size is " <<sizeof(char) << endl;
-    cout << "PROBLEM 2\n";
-    cout << "Ulugbek Nishonxodjaev" << endl;
-    cout << "230310 " << endl;
-    cout << "Idea 22 - Neon" << endl;
-    cout << "Avengers\n";
->>>>>>> 92211d1aa09473238125ed220d60e69b3da8fd0e
