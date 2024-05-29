@@ -1,46 +1,109 @@
 #include <iostream>
-#include <valarray>
-#include <cmath>
 
 using namespace std;
-int main (){
-cout << "Problem 1\n";
-    int num1,num2;
-    float avg , product;
-    cout << "Enter the first number:";
-    cin >> num1;
-    cout << "Enter the second number:";
-    cin >> num2;
-    avg = num1 + num2/2;
-    product = num1 * num2;
-    cout << "The avg of two numbers:" << avg << endl;
-    cout << " The product of two numbers :" << product << endl;
-    cout << "Problem 2\n";
-    float a,b ,area;
-    cout << "Enter the Base of a triangle:";
-    cin >> a;
-    cout << "Enter the Length of a triangle:";
-    cin >> b;
-    area =(a*b)/2;
-    cout << "The area of a Triangle is : " << area << endl;
-    cout <<"Problem 3\n";
-    float  Celsius,Fahrenheit,temp;
-    cout << "\nEnter the temperature in Celsius: ";
-    cin >> Celsius;
-    temp = 1.8 * Celsius + 32;
-    cout << "\nThe temperature in Fahrenheit is :" << temp << endl;
-    cout << "Problem 4\n";
-    double base , exponent1 , exponent2 ;
-    cout << " Enter the expressions :" ;
-    cin >> base >>  exponent1  >> exponent2 ;
-    double result = pow(pow(base,exponent1),exponent2);
-    cout << "The result of (a^b)^c is ;" << result << endl ;2;
-    cout << "\n Problem 5 ";
-    double N;
-    cout << "Enter a number:";
-    cin >> N ;
-    cout << "Powers of " << N << " from 1 to 10:" << endl;
-    for (int i = 1; i <= 10; ++i) {
-        cout << N << " ^ " << i << " = " << pow(N, i) << endl;
+
+
+int multiply(int x, int y) {
+    if (y == 0) {
+        return 0;
+    } else if (y > 0) {
+        return x + multiply(x, y - 1); 
+    } else {
+        return -multiply(x, -y); // Handle negative y
     }
-    return 0; }
+}
+int sumDigits(int n) {
+    if (n == 0) {
+        return 0;
+    } else {
+        return (n % 10) + sumDigits(n / 10);
+    }
+}
+void decimalToBinary(int decimalNumber) {
+    if (decimalNumber == 0) {
+        return;
+    } else {
+        decimalToBinary(decimalNumber / 2);
+        cout << (decimalNumber % 2);
+    }
+
+int main() {
+    cout <<"Problem 1\n";
+    int x, y;
+    cout << "Enter two numbers: ";
+    cin >> x >> y;
+
+    int result = multiply(x, y);
+    cout << "Result: " << result << endl;
+    cout <<"Problem 2\n";
+    
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+
+    cout << "Sum of digits: " << sumDigits(n) << endl;
+    cout << "Problem 3\n";
+    int inputDecimal;
+    cout << "Enter a decimal number: ";
+    cin >> inputDecimal;
+
+    cout << "Binary representation: ";
+    decimalToBinary(inputDecimal);
+    cout << endl;
+    cout << "Problem 4\n";
+    int numRows, numCols;
+    cout << "Enter the number of rows: ";
+    cin >> numRows;
+    cout << "Enter the number of columns: ";
+    cin >> numCols;
+
+    int matrix[numRows][numCols];
+    cout << "Enter the elements of the matrix:\n";
+    for (int i = 0; i < numRows; i++) {
+        for (int j = 0; j < numCols; j++) {
+            cin >> matrix[i][j];
+        }
+    }
+
+    cout << "Row-wise sum:\n";
+    for (int i = 0; i < numRows; i++) {
+        int rowSum = 0;
+        for (int j = 0; j < numCols; j++) {
+            rowSum += matrix[i][j];
+        }
+        cout << rowSum << endl;
+    cout <<"Problem 5\n";
+          int numRows, numCols;
+    cout << "Enter the number of rows: ";
+    cin >> numRows;
+    cout << "Enter the number of columns: ";
+    cin >> numCols;
+
+    int arrayA[numRows][numCols], arrayB[numRows][numCols];
+    cout << "Enter the elements of matrix A:\n";
+    for (int i = 0; i < numRows; i++) {
+        for (int j = 0; j < numCols; j++) {
+            cin >> arrayA[i][j];
+        }
+    }
+    cout << "Enter the elements of matrix B:\n";
+    for (int i = 0; i < numRows; i++) {
+        for (int j = 0; j < numCols; j++) {
+            cin >> arrayB[i][j];
+        }
+    }
+
+    cout << "Sum of matrices:\n";
+    for (int i = 0; i < numRows; i++) {
+        for (int j = 0; j < numCols; j++) {
+            cout << arrayA[i][j] + arrayB[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    
+
+
+
+    return 0;
+}
